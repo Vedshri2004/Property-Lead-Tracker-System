@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const pool = require("../db");
+
+// ✅ FIXED: db.js is in same folder
+const pool = require("./db");
 
 
 // Create Lead
@@ -21,7 +23,7 @@ router.post("/", async (req, res) => {
 });
 
 
-// Get All Leads with Buyer + Broker Names
+// Get All Leads with Buyer + Broker Details
 router.get("/", async (req, res) => {
   try {
     const result = await pool.query(
