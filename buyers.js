@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const pool = require("../db");
+
+// ✅ FIXED: db.js is in same folder
+const pool = require("./db");
 
 
 // Add Buyer
