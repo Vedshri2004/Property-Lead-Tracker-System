@@ -1,9 +1,9 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 
-const buyerRoutes = require("./routes/buyers");
-const brokerRoutes = require("./routes/brokers");
-const leadRoutes = require("./routes/leads");
+const buyerRoutes = require("./buyers");
+const brokerRoutes = require("./brokers");
+const leadRoutes = require("./leads");
 
 const app = express();
 app.use(bodyParser.json());
